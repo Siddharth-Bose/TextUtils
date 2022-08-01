@@ -1,0 +1,18 @@
+.bgNavy{
+    background-color: rgba(14, 28, 109, 0.753);
+}
+.float{
+    animation-name: float;
+    animation-duration: 5s;
+}
+@keyframes float{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}

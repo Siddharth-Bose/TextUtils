@@ -1,0 +1,16 @@
+.bgNavy{
+    background-color: rgba(14, 28, 109, 0.753);
+}
+.blink{
+    
+    animation-name: appear;
+    animation-duration: 1s;
+}
+@keyframes appear{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
