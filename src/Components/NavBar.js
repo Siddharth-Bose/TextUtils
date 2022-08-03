@@ -1,24 +1,45 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function MyNavBar() {
   return (
-    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Container>
-        <Navbar.Brand><Link to='/'>TextUtilities</Link></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link ><Link to='/About'>About</Link></Nav.Link>
-          </Nav>
-          <Nav>
-            <Nav.Link><Link to='/try-it-out'>Try it Out!</Link></Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+    <nav className="navbar navbar-expand-lg bg-dark ">
+      <div className="container">
+        <Link className="navbar-brand text-white" to="/Home">
+          TextUtils
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="true"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul className="navbar-nav">
+            <li className="nav-item">
+              <Link
+                className="nav-link text-white active"
+                aria-current="page"
+                to="/Home"
+              >
+                Home
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link className="nav-link text-white" to="/Util">
+              Try it Out
+            </Link>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 }
 

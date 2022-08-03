@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import styles from "./Features.module.css";
 
-export default function Features() {
+export default function Features(props) {
   return (
     <>
       <div className={`container p-0 text-center my-5`}>
@@ -13,7 +13,7 @@ export default function Features() {
               Easily paste your text in the editor, and convert it to Uppercase just with the Help of a Click.
             </Card.Text>
             <div className="text-center">
-              <Button variant="secondary">Try it Out Now!</Button>
+              <Button variant="secondary" onClick={props.onClick}>Try it Out Now!</Button>
             </div>
           </Card.Body>
         </Card>
@@ -24,7 +24,7 @@ export default function Features() {
                 Easily paste your text in the editor, and convert it to Sentence Case just with the Help of a Click.
             </Card.Text>
             <div className="text-center">
-              <Button variant="secondary">Try it Out Now!</Button>
+              <Button variant="secondary" onClick={props.onClick}>Try it Out Now!</Button>
             </div>
           </Card.Body>
         </Card>
@@ -35,7 +35,7 @@ export default function Features() {
                 Easily paste your text in the editor, and convert it to Lowercase just with the Help of a Click.
             </Card.Text>
             <div className="text-center">
-              <Button variant="secondary">Try it Out Now!</Button>
+              <Button variant="secondary" onClick={props.onClick}>Try it Out Now!</Button>
             </div>
           </Card.Body>
         </Card>
@@ -46,7 +46,7 @@ export default function Features() {
               Choose from variety of options to change the case of your text. Happy Formatting!
             </Card.Text>
             <div className="text-center">
-              <Button variant="secondary">Try it Out Now!</Button>
+              <Button variant="secondary" onClick={props.onClick}>Try it Out Now!</Button>
             </div>
           </Card.Body>
         </Card>
