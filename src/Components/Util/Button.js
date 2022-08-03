@@ -1,5 +1,5 @@
 export default function Button(props){
     return (
-        <button className={`${props.className} + btn btn-outline-dark`} style={props.style}>{props.children}</button>
+        <button className={`btn + ${props.className} `} style={props.style} onClick={props.onClick}>{props.children}</button>
     );
 }
